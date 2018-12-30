@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Main.unity
     guid: 296c2a2409048794e9c3354300bca4e3
+  - enabled: 1
+    path: Assets/Scene/Professor_pod.unity
+    guid: 39da72cf0df5d344f814c12fefd9dcde
