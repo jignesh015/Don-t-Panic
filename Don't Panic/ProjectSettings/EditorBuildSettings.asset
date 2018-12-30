@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Player_pod.unity
     guid: a4555c4afc4088d4198a8a9f01947dfe
+  - enabled: 1
+    path: Assets/Scene/Main.unity
+    guid: 296c2a2409048794e9c3354300bca4e3
