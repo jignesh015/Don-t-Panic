@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Professor_pod.unity
     guid: 39da72cf0df5d344f814c12fefd9dcde
+  - enabled: 1
+    path: Assets/Scene/Captain_pod.unity
+    guid: 9de0ee0309c9f54458ffbe79edef18cc
+  - enabled: 1
+    path: Assets/Scene/Lieutenant_pod.unity
+    guid: 780aa3c99d14d2b45bfbbaee74b79a36
