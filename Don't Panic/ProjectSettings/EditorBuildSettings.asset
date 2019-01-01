@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Storage_room_1.unity
     guid: 9a31fa725d2d6354ba69072520753a04
+  - enabled: 1
+    path: Assets/Scene/Storage_room_2.unity
+    guid: 7afa69c0de26db941bcbe0b4e2c403bb
