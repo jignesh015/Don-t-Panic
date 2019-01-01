@@ -18965,75 +18965,103 @@ Prefab:
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224181592944671476, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223664047217308292, guid: 98521efcfac800e46b8f473e74a11704,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 715286685}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1663594524 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1505690836855524, guid: 98521efcfac800e46b8f473e74a11704,
+    type: 2}
+  m_PrefabInternal: {fileID: 1663594523}
+--- !u!114 &1663594525 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114877256110307370, guid: 98521efcfac800e46b8f473e74a11704,
+    type: 2}
+  m_PrefabInternal: {fileID: 1663594523}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1663594526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663594524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1593407ec96cd4e8bfdeec739c3160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1663594525}
 --- !u!1001 &1665600573
 Prefab:
   m_ObjectHideFlags: 0
