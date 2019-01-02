@@ -11,6 +11,7 @@ public class OpenDoor : MonoBehaviour {
 
 	public Material doorOpeningMaterial;
 
+	public int spawnToWaypoint;
 	// Use this for initialization
 	void Start () {
 		
@@ -32,5 +33,6 @@ public class OpenDoor : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(1.9f);
 		SceneManager.LoadScene (sceneName);
+		StaticValues.SpawnToWaypoint = spawnToWaypoint;
 	}
 }
