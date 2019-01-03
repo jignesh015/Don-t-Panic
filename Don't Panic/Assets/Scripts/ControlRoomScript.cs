@@ -9,8 +9,11 @@ public class ControlRoomScript : MonoBehaviour {
 
 	public Material warningSwitchedOffMat;
 	public Material bigScreenMat;
+	public Material highlightMat;
 
 	public ParticleSystem destroyEffect;
+
+	private Material ogMat;
 
 	// Use this for initialization
 	void Start () {
@@ -33,5 +36,15 @@ public class ControlRoomScript : MonoBehaviour {
 		destroyEffect.Play ();
 		StaticValues.CollectibleScore = 1;
 		Debug.Log (StaticValues.CollectibleScore);
+	}
+
+	public void HighlightObj(GameObject obj) {
+		ogMat = obj.GetComponent<MeshRenderer> ().material;
+
+		obj.GetComponent<MeshRenderer> ().material = highlightMat;
+	}
+
+	public void UnhighlightObj(GameObject obj) {
+		obj.GetComponent<MeshRenderer> ().material = ogMat;
 	}
 }
