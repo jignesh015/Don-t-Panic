@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scene/Player_pod.unity
     guid: a4555c4afc4088d4198a8a9f01947dfe
   - enabled: 1
-    path: Assets/Scene/Main.unity
-    guid: 296c2a2409048794e9c3354300bca4e3
+    path: Assets/Scene/Control_room.unity
+    guid: 2ae4a97c076646e499adc33f240d7ea7
   - enabled: 1
     path: Assets/Scene/Professor_pod.unity
     guid: 39da72cf0df5d344f814c12fefd9dcde
