@@ -10,6 +10,8 @@ public class ControlRoomScript : MonoBehaviour {
 	public Material warningSwitchedOffMat;
 	public Material bigScreenMat;
 
+	public ParticleSystem destroyEffect;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -23,5 +25,13 @@ public class ControlRoomScript : MonoBehaviour {
 	public void SwitchOffWarning() {
 		computerScreen.GetComponent<MeshRenderer> ().material = warningSwitchedOffMat;
 		bigScreen.GetComponent<MeshRenderer> ().material = bigScreenMat;
+	}
+
+	public void CollectArtwork(GameObject collectible) {
+		destroyEffect.gameObject.transform.position = collectible.transform.position;
+		Destroy (collectible);
+		destroyEffect.Play ();
+		StaticValues.CollectibleScore = 1;
+		Debug.Log (StaticValues.CollectibleScore);
 	}
 }
