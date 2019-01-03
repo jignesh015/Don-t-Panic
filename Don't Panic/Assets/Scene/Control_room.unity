@@ -3027,17 +3027,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ecb8d38938be8040aa3063dee1f7c9d, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &374159824 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114100919153265666, guid: 1ecb8d38938be8040aa3063dee1f7c9d,
-    type: 2}
-  m_PrefabInternal: {fileID: 374159823}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!223 &374159825 stripped
-Canvas:
-  m_PrefabParentObject: {fileID: 223265746835055806, guid: 1ecb8d38938be8040aa3063dee1f7c9d,
-    type: 2}
-  m_PrefabInternal: {fileID: 374159823}
 --- !u!1 &387046590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,6 +5022,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 608958044}
   m_Mesh: {fileID: 4300000, guid: a0d8f320763fe4945b863868635a92f5, type: 3}
+--- !u!223 &610624764 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223591768676087392, guid: cd83a05899ed01c4f8604f7035ed91f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1678228655}
 --- !u!1 &628387448
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,12 +5111,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     - target: {fileID: 1856280659271006, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
       propertyPath: m_Name
       value: Waypoint (12)
@@ -6329,12 +6323,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -6914,12 +6908,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -7050,12 +7044,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -7379,12 +7373,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -7863,6 +7857,8 @@ MonoBehaviour:
   bigScreenMat: {fileID: 2100000, guid: bf1464b84bb76b44abb088d5a41acfee, type: 2}
   highlightMat: {fileID: 2100000, guid: 91f224594b42f6b4480526818a7a1193, type: 2}
   destroyEffect: {fileID: 373789700}
+  sliderCanvas: {fileID: 610624764}
+  slider: {fileID: 1411173028}
 --- !u!4 &1064737016
 Transform:
   m_ObjectHideFlags: 0
@@ -9228,12 +9224,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -9798,12 +9794,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -10052,6 +10048,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1406396367}
   m_Mesh: {fileID: 4300000, guid: 8d199d8824e784743af821727659334b, type: 3}
+--- !u!114 &1411173028 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114945820771137486, guid: cd83a05899ed01c4f8604f7035ed91f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1678228655}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1413411152
 GameObject:
   m_ObjectHideFlags: 0
@@ -10746,12 +10748,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     - target: {fileID: 1856280659271006, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
       propertyPath: m_Name
       value: Waypoint (6)
@@ -11544,6 +11546,121 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1631247215}
   m_Mesh: {fileID: 4300000, guid: 80b93341bf275fe408b1bd56cb261ce8, type: 3}
+--- !u!1001 &1678228655
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066085500060412, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223591768676087392, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 208117104}
+    - target: {fileID: 224819607097332878, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224819607097332878, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd83a05899ed01c4f8604f7035ed91f0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1679178754
 GameObject:
   m_ObjectHideFlags: 0
@@ -11947,12 +12064,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -13267,12 +13384,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -13992,12 +14109,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     - target: {fileID: 1856280659271006, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
       propertyPath: m_Name
       value: Waypoint (11)
@@ -14116,12 +14233,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
@@ -14563,12 +14680,12 @@ Prefab:
         type: 2}
       propertyPath: sliderCanvas
       value: 
-      objectReference: {fileID: 374159825}
+      objectReference: {fileID: 610624764}
     - target: {fileID: 114890514670065526, guid: 122ac5f3582c3d748b8169be2fd62f83,
         type: 2}
       propertyPath: slider
       value: 
-      objectReference: {fileID: 374159824}
+      objectReference: {fileID: 1411173028}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122ac5f3582c3d748b8169be2fd62f83, type: 2}
   m_IsPrefabParent: 0
