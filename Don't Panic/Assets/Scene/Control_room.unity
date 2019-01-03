@@ -1584,6 +1584,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 199079572}
   m_Mesh: {fileID: 4300000, guid: 752b74f5002e02f49927d7006a3e51e8, type: 3}
+--- !u!20 &208117104 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20995828096158860, guid: 27523dee0216da14ba9d0cce3d4be27c,
+    type: 2}
+  m_PrefabInternal: {fileID: 485151675}
 --- !u!1 &237575668
 GameObject:
   m_ObjectHideFlags: 0
@@ -7584,6 +7589,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223664047217308292, guid: 98521efcfac800e46b8f473e74a11704,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 208117104}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
   m_IsPrefabParent: 0
