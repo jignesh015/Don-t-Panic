@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameLogic : MonoBehaviour {
+public class SpawnLogic : MonoBehaviour {
 
 	public List<GameObject> spawnToWaypoints;
 
