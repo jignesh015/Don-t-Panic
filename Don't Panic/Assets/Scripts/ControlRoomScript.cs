@@ -10,37 +10,37 @@ public class ControlRoomScript : MonoBehaviour {
 
 	public Material warningSwitchedOffMat;
 	public Material bigScreenMat;
-	public Material highlightMat;
-
-	public ParticleSystem destroyEffect;
 
 	public Canvas sliderCanvas;
 	public Slider slider;
 
-	private Material ogMat;
+	public List<GameObject> collectibles;
+
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
-	private GameObject focusedObj;
 
 	// Use this for initialization
 	void Start () {
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
+
+		if (StaticValues.CollectibleList.Count > 0) {
+			if (StaticValues.CollectibleList.Contains ("cr_art_0")) {
+				Destroy (collectibles [0]);
+			}
+			if (StaticValues.CollectibleList.Contains ("cr_art_1")) {
+				Destroy (collectibles [1]);
+			}
+			if (StaticValues.CollectibleList.Contains ("cr_art_2")) {
+				Destroy (collectibles [2]);
+			}
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (pointerFlag) {
-			//Sets the progress slider value
-			float sliderValue = Time.time - enterTime;
-			slider.value = sliderValue;
-
-			if ((Time.time - enterTime) > hoverTime) {
-				CollectArtwork (focusedObj);
-				pointerFlag = false;
-			}
-		}
+		
 	}
 
 	public void SwitchOffWarning() {
@@ -48,28 +48,6 @@ public class ControlRoomScript : MonoBehaviour {
 		bigScreen.GetComponent<MeshRenderer> ().material = bigScreenMat;
 	}
 
-	public void CollectArtwork(GameObject collectible) {
-		destroyEffect.gameObject.transform.position = collectible.transform.position;
-		Destroy (collectible);
-		destroyEffect.Play ();
-		StaticValues.CollectibleScore = 1;
-		Debug.Log (StaticValues.CollectibleScore);
-		PointerExit ();
-	}
-
-	public void HighlightObj(GameObject obj) {
-		focusedObj = obj;
-		PointerEnter ();
-
-		ogMat = obj.GetComponent<MeshRenderer> ().material;
-		obj.GetComponent<MeshRenderer> ().material = highlightMat;
-	}
-
-	public void UnhighlightObj(GameObject obj) {
-		PointerExit ();
-
-		obj.GetComponent<MeshRenderer> ().material = ogMat;
-	}
 
 	private void PointerEnter() {
 		sliderCanvas.gameObject.SetActive (true);

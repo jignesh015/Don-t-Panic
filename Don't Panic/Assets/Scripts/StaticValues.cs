@@ -1,22 +1,37 @@
-﻿public static class StaticValues {
-	private static int spawnToWaypoint;
-	private static int collectibleScore = 0;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public static class StaticValues {
+	private static int _spawnToWaypoint;
+	private static int _collectibleScore = 0;
+	private static List<string> _collectibleList = new List<string>();
 
 	public static int SpawnToWaypoint {
 		get { 
-			return spawnToWaypoint;
+			return _spawnToWaypoint;
 		}
 		set { 
-			spawnToWaypoint = value;
+			_spawnToWaypoint = value;
 		}
 	}
 
 	public static int CollectibleScore {
 		get { 
-			return collectibleScore;
+			return _collectibleScore;
 		}
 		set { 
-			collectibleScore = collectibleScore + value;
+			_collectibleScore = _collectibleScore + value;
+		}
+	}
+
+	public static List<string> CollectibleList {
+		get { 
+			return _collectibleList;
+		}
+		set { 
+			_collectibleList = value;
 		}
 	}
 }
