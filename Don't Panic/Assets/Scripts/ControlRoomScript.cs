@@ -15,7 +15,6 @@ public class ControlRoomScript : MonoBehaviour {
 	public ParticleSystem destroyEffect;
 
 	public Canvas sliderCanvas;
-
 	public Slider slider;
 
 	private Material ogMat;
