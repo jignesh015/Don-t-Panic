@@ -11,16 +11,24 @@ public class CollectibleScript : MonoBehaviour {
 	public Canvas sliderCanvas;
 	public Slider slider;
 
+	public AudioClip collectibleAudio;
+
 	private Material ogMat;
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
 	private GameObject focusedObj;
+	private AudioSource _collectibleAudioSource;
 
 	// Use this for initialization
 	void Start () {
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
+
+		_collectibleAudioSource = gameObject.GetComponent<AudioSource> ();
+		_collectibleAudioSource.clip = collectibleAudio;
+		_collectibleAudioSource.playOnAwake = false;
+		_collectibleAudioSource.volume = 0.1f;
 	}
 	
 	// Update is called once per frame
@@ -42,6 +50,7 @@ public class CollectibleScript : MonoBehaviour {
 		StaticValues.CollectibleList.Add (collectible.name);
 		Destroy (collectible);
 		destroyEffect.Play ();
+		_collectibleAudioSource.Play ();
 		StaticValues.CollectibleScore = 1;
 		Debug.Log (StaticValues.CollectibleScore);
 		PointerExit ();
