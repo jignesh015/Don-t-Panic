@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.4392157, g: 1, b: 0.9529412, a: 1}
+  m_AmbientSkyColor: {r: 0.75735295, g: 1, b: 0.979638, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -1345,6 +1345,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223664047217308292, guid: 98521efcfac800e46b8f473e74a11704,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1957225774}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
   m_IsPrefabParent: 0
@@ -2225,7 +2230,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977024557290206, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114304398270107732, guid: 26bb85361d1f70e49948ee43adbcd0a3,
         type: 2}
@@ -2334,6 +2339,43 @@ Prefab:
       propertyPath: doorClip
       value: 
       objectReference: {fileID: 8300000, guid: 9610c256a47d3514c8f878cb2e304b99, type: 3}
+    - target: {fileID: 1840053565400054, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383140477429894, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383140477429894, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383140477429894, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 23081398706128586, guid: 26bb85361d1f70e49948ee43adbcd0a3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 97d437548b1e1964898a8a04856e4396, type: 2}
+    - target: {fileID: 1573829110931208, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386310789573226, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534079258054356, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.035999686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534079258054356, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.5100001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
   m_IsPrefabParent: 0
