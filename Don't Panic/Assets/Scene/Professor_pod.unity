@@ -2199,6 +2199,11 @@ Prefab:
       value: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0,
         Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
+    - target: {fileID: 114872270784578752, guid: 26bb85361d1f70e49948ee43adbcd0a3,
+        type: 2}
+      propertyPath: doorClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9610c256a47d3514c8f878cb2e304b99, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26bb85361d1f70e49948ee43adbcd0a3, type: 2}
   m_IsPrefabParent: 0
@@ -2213,6 +2218,91 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 986740464}
   m_Script: {fileID: 11500000, guid: d7849b273d66d6c47a3acbc66b68a806, type: 3}
+--- !u!1 &986740467 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1244265520278664, guid: 26bb85361d1f70e49948ee43adbcd0a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 986740464}
+--- !u!82 &986740468
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986740467}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1047580095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,6 +4026,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223591768676087392, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1957225774}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd83a05899ed01c4f8604f7035ed91f0, type: 2}
   m_IsPrefabParent: 0
@@ -4691,6 +4786,11 @@ Prefab:
 --- !u!4 &1957225773 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4920902711596852, guid: 27523dee0216da14ba9d0cce3d4be27c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1957225772}
+--- !u!20 &1957225774 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20995828096158860, guid: 27523dee0216da14ba9d0cce3d4be27c,
     type: 2}
   m_PrefabInternal: {fileID: 1957225772}
 --- !u!1 &1971009406

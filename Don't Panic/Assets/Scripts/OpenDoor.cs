@@ -17,15 +17,23 @@ public class OpenDoor : MonoBehaviour {
 	public Canvas sliderCanvas;
 	public Slider slider;
 
+	public AudioClip doorClip;
+
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
 	private string _sceneName;
+	private AudioSource _doorAudioSource;
 
 	// Use this for initialization
 	void Start () {
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
+
+		_doorAudioSource = gameObject.GetComponent<AudioSource> ();
+		_doorAudioSource.clip = doorClip;
+		_doorAudioSource.playOnAwake = false;
+		_doorAudioSource.volume = 0.5f;
 	}
 	
 	// Update is called once per frame
@@ -46,6 +54,7 @@ public class OpenDoor : MonoBehaviour {
 		_sceneName = sceneName;
 		consoleScreen.GetComponent<MeshRenderer> ().material = doorOpeningMaterial;
 		doorAnimator.SetBool ("OpenDoor", true);
+		_doorAudioSource.Play ();
 		StartCoroutine(ChangeScene(_sceneName));
 	}
 
