@@ -17,6 +17,12 @@ public class SpawnLogic : MonoBehaviour {
 
 	void Awake() {
 		transform.position = spawnToWaypoints [StaticValues.SpawnToWaypoint].transform.position;
+
+		if (StaticValues.SpawnToWaypoint == 0 || StaticValues.SpawnToWaypoint == 1) {
+			transform.rotation = Quaternion.Euler (0, 90, 0);
+		} else {
+			transform.rotation = Quaternion.Euler (0, 180, 0);
+		}
 	}
 		
 }
