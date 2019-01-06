@@ -4,11 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public static class StaticValues {
+	private static bool _dontPanicFlag = true;
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
 	private static string _currentObjective = "Do something";
 	private static List<string> _collectibleList = new List<string>();
 	private static List<string> _keywords = new List<string>(new string[] { "42", "forty two", "order to", "for to", "for two", "for the" ,"photo", "ford to", "for you to", "for you two"});
+
+	public static bool DontPanicFlag {
+		get { 
+			return _dontPanicFlag;
+		}
+		set { 
+			_dontPanicFlag = value;
+		}
+	}
 
 	public static int SpawnToWaypoint {
 		get { 

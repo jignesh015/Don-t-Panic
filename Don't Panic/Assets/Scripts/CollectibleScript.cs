@@ -26,7 +26,6 @@ public class CollectibleScript : MonoBehaviour {
 		sliderCanvas.gameObject.SetActive (false);
 
 		_collectibleAudioSource = gameObject.GetComponent<AudioSource> ();
-		_collectibleAudioSource.clip = collectibleAudio;
 		_collectibleAudioSource.playOnAwake = false;
 		_collectibleAudioSource.volume = 0.1f;
 	}
@@ -50,6 +49,7 @@ public class CollectibleScript : MonoBehaviour {
 		StaticValues.CollectibleList.Add (collectible.name);
 		Destroy (collectible);
 		destroyEffect.Play ();
+		_collectibleAudioSource.clip = collectibleAudio;
 		_collectibleAudioSource.Play ();
 		StaticValues.CollectibleScore = 1;
 		Debug.Log (StaticValues.CollectibleScore);
