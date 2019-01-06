@@ -150,6 +150,8 @@ public class ExampleStreaming : MonoBehaviour
     }
 
 	public void BtnRecord() {
+		_passAudioSource.clip = passCorrect;
+		_passAudioSource.Play ();
 		Active = true;
 		StartRecording();
 		ResultsField.text = "Speak \n password";
