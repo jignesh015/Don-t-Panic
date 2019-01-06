@@ -7,7 +7,7 @@ public static class StaticValues {
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
 	private static List<string> _collectibleList = new List<string>();
-	private static List<string> _keywords = new List<string>(new string[] { "42", "forty two", "order to", "for to", "for two", "photo" });
+	private static List<string> _keywords = new List<string>(new string[] { "42", "forty two", "order to", "for to", "for two", "for the" ,"photo", "ford to"});
 
 	public static int SpawnToWaypoint {
 		get { 

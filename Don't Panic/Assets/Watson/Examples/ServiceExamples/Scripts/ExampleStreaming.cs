@@ -49,6 +49,9 @@ public class ExampleStreaming : MonoBehaviour
 	public AudioClip passCorrect;
 
 	public GameObject captainDoor;
+
+	public Canvas sliderCanvas;
+	public Slider slider;
     #endregion
 
 
@@ -58,7 +61,9 @@ public class ExampleStreaming : MonoBehaviour
     private int _recordingBufferSize = 1;
     private int _recordingHZ = 22050;
 	private AudioSource _passAudioSource;
-	private OpenDoor _openDoor;
+	private bool _pointerFlag = false;
+	private float _enterTime;
+	private float _hoverTime = 1.5f;
 
     private SpeechToText _service;
 
@@ -68,8 +73,23 @@ public class ExampleStreaming : MonoBehaviour
         Runnable.Run(CreateService());
 
 		_passAudioSource = gameObject.GetComponent<AudioSource> ();
-		_openDoor = new OpenDoor ();
+
+		slider.maxValue = _hoverTime;
+		sliderCanvas.gameObject.SetActive (false);
     }
+
+	void Update () {
+		if (_pointerFlag) {
+			//Sets the progress slider value
+			float sliderValue = Time.time - _enterTime;
+			slider.value = sliderValue;
+
+			if ((Time.time - _enterTime) > _hoverTime) {
+				BtnRecord ();
+				_pointerFlag = false;
+			}
+		}
+	}
 
     private IEnumerator CreateService()
     {
@@ -132,6 +152,20 @@ public class ExampleStreaming : MonoBehaviour
 	public void BtnRecord() {
 		Active = true;
 		StartRecording();
+		ResultsField.text = "Speak \n password";
+	}
+
+	public void Enter() {
+		sliderCanvas.gameObject.SetActive (true);
+		_pointerFlag = true;
+		_enterTime = Time.time;
+	}
+
+	public void Exit() {
+		_pointerFlag = false;
+		sliderCanvas.gameObject.SetActive (false);
+		//Reset progress slider value
+		slider.value = 0.0f;
 	}
 
     private void StartRecording()
@@ -145,7 +179,7 @@ public class ExampleStreaming : MonoBehaviour
 
     private void StopRecording()
     {
-		Debug.Log ("Recording stopped");
+		//Debug.Log ("Recording stopped");
         if (_recordingRoutine != 0)
         {
             Microphone.End(_microphoneID);
@@ -163,7 +197,7 @@ public class ExampleStreaming : MonoBehaviour
 
     private IEnumerator RecordingHandler()
     {
-        Log.Debug("ExampleStreaming.RecordingHandler()", "devices: {0}", Microphone.devices);
+        //Log.Debug("ExampleStreaming.RecordingHandler()", "devices: {0}", Microphone.devices);
         _recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
         yield return null;      // let _recordingRoutine get set..
 
@@ -182,7 +216,7 @@ public class ExampleStreaming : MonoBehaviour
             int writePos = Microphone.GetPosition(_microphoneID);
             if (writePos > _recording.samples || !Microphone.IsRecording(_microphoneID))
             {
-                Log.Error("ExampleStreaming.RecordingHandler()", "Microphone disconnected.");
+                //Log.Error("ExampleStreaming.RecordingHandler()", "Microphone disconnected.");
 
                 StopRecording();
                 yield break;
@@ -227,8 +261,9 @@ public class ExampleStreaming : MonoBehaviour
             {
                 foreach (var alt in res.alternatives)
                 {
+					Debug.Log (alt.transcript.Trim ().ToLower ());
 					if (StaticValues.Keywords.Contains(alt.transcript.Trim().ToLower())) {
-						ResultsField.text = "Password " + alt.transcript.Trim().ToLower() + " is correct";
+						ResultsField.text = "Password \n correct";
 						_passAudioSource.clip = passCorrect;
 						_passAudioSource.Play ();
 						StopRecording ();
@@ -236,27 +271,27 @@ public class ExampleStreaming : MonoBehaviour
 					} else {
 						_passAudioSource.clip = passIncorrect;
 						_passAudioSource.Play ();
-						ResultsField.text = "Password " + alt.transcript.Trim().ToLower() + " is incorrect. Try again" ;
+						ResultsField.text = "Password \n incorrect \n Try again" ;
 					}
                 }
 
-                if (res.keywords_result != null && res.keywords_result.keyword != null)
-                {
-                    foreach (var keyword in res.keywords_result.keyword)
-                    {
-                        Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
-                    }
-                }
-
-                if (res.word_alternatives != null)
-                {
-                    foreach (var wordAlternative in res.word_alternatives)
-                    {
-                        Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
-                        foreach(var alternative in wordAlternative.alternatives)
-                            Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
-                    }
-                }
+//                if (res.keywords_result != null && res.keywords_result.keyword != null)
+//                {
+//                    foreach (var keyword in res.keywords_result.keyword)
+//                    {
+//                        Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
+//                    }
+//                }
+//
+//                if (res.word_alternatives != null)
+//                {
+//                    foreach (var wordAlternative in res.word_alternatives)
+//                    {
+//                        Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
+//                        foreach(var alternative in wordAlternative.alternatives)
+//                            Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
+//                    }
+//                }
             }
         }
     }
