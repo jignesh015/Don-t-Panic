@@ -4789,76 +4789,76 @@ Prefab:
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224181592944671476, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114877256110307370, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_Text
-      value: test
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
@@ -4874,6 +4874,23 @@ Canvas:
   m_PrefabParentObject: {fileID: 223664047217308292, guid: 98521efcfac800e46b8f473e74a11704,
     type: 2}
   m_PrefabInternal: {fileID: 1626900116}
+--- !u!1 &1626900119 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704,
+    type: 2}
+  m_PrefabInternal: {fileID: 1626900116}
+--- !u!114 &1626900120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626900119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865f0ea4f7d99754e80d57ca91eb2c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudText: {fileID: 1626900117}
 --- !u!1 &1694446391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,6 +5335,7 @@ MonoBehaviour:
   sliderCanvas: {fileID: 1464429933}
   slider: {fileID: 1464429934}
   collectibleAudio: {fileID: 8300000, guid: fd82d7051f4b99e49a5bbf4ee8c3ff38, type: 3}
+  hudCanvas: {fileID: 1626900118}
 --- !u!4 &1802991198
 Transform:
   m_ObjectHideFlags: 0

@@ -2034,6 +2034,7 @@ MonoBehaviour:
   sliderCanvas: {fileID: 1040452926}
   slider: {fileID: 1040452927}
   collectibleAudio: {fileID: 8300000, guid: fd82d7051f4b99e49a5bbf4ee8c3ff38, type: 3}
+  hudCanvas: {fileID: 209638747}
 --- !u!82 &995932939
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2466,67 +2467,67 @@ Prefab:
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224008809576833114, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224657031941958530, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224181592944671476, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 223664047217308292, guid: 98521efcfac800e46b8f473e74a11704,
         type: 2}
@@ -2535,17 +2536,39 @@ Prefab:
       objectReference: {fileID: 767675079}
     - target: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877256110307370, guid: 98521efcfac800e46b8f473e74a11704,
+        type: 2}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98521efcfac800e46b8f473e74a11704, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1096988325 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704,
+    type: 2}
+  m_PrefabInternal: {fileID: 1096988324}
 --- !u!114 &1096988326 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114877256110307370, guid: 98521efcfac800e46b8f473e74a11704,
     type: 2}
   m_PrefabInternal: {fileID: 1096988324}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1096988327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096988325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865f0ea4f7d99754e80d57ca91eb2c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudText: {fileID: 1096988326}
 --- !u!1001 &1117225562
 Prefab:
   m_ObjectHideFlags: 0

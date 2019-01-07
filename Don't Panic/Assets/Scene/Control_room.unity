@@ -11745,7 +11745,7 @@ Prefab:
     - target: {fileID: 114448199599630158, guid: 83d0a936c5ee10e449127746069b59b9,
         type: 2}
       propertyPath: _iamApikey
-      value: 
+      value: JMlbv06PfN2COepmbCn8jDL12ARK36weMiStIFH1zzb7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83d0a936c5ee10e449127746069b59b9, type: 2}
@@ -12389,6 +12389,7 @@ MonoBehaviour:
   sliderCanvas: {fileID: 610624764}
   slider: {fileID: 1411173028}
   collectibleAudio: {fileID: 8300000, guid: fd82d7051f4b99e49a5bbf4ee8c3ff38, type: 3}
+  hudCanvas: {fileID: 1028097911}
 --- !u!82 &1064737018
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13926,7 +13927,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244784357}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e1593407ec96cd4e8bfdeec739c3160, type: 3}
   m_Name: 
@@ -19393,6 +19394,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994338606}
   m_Mesh: {fileID: 4300000, guid: f956c720d66359e44b3d685035075942, type: 3}
+--- !u!1 &1997221404 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1846981475071860, guid: 98521efcfac800e46b8f473e74a11704,
+    type: 2}
+  m_PrefabInternal: {fileID: 1028097910}
+--- !u!114 &1997221408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997221404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865f0ea4f7d99754e80d57ca91eb2c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudText: {fileID: 1028097912}
 --- !u!1 &1997706027
 GameObject:
   m_ObjectHideFlags: 0

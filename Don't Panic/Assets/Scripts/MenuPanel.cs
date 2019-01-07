@@ -52,8 +52,10 @@ public class MenuPanel : MonoBehaviour {
 	}
 
 	public void artworksCollected() {
-		mainHUD.gameObject.SetActive (true);
-		hudText.text = "Artworks Collected: \n" + StaticValues.CollectibleScore.ToString() + "/7";
+//		mainHUD.gameObject.SetActive (true);
+//		hudText.text = "Artworks Collected: \n" + StaticValues.CollectibleScore.ToString() + "/7";
+		StaticValues.CurrentHUDMessage = "Artworks Collected: \n" + StaticValues.CollectibleScore.ToString() + "/7";
+		mainHUD.gameObject.GetComponent<HUDLogic> ().ShowMessage ();
 	}
 
 	public void enterCurrentObj() {

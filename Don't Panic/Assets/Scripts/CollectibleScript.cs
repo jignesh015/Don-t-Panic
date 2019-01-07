@@ -13,6 +13,8 @@ public class CollectibleScript : MonoBehaviour {
 
 	public AudioClip collectibleAudio;
 
+	public Canvas hudCanvas;
+
 	private Material ogMat;
 	private bool pointerFlag = false;
 	private float enterTime;
@@ -52,7 +54,8 @@ public class CollectibleScript : MonoBehaviour {
 		_collectibleAudioSource.clip = collectibleAudio;
 		_collectibleAudioSource.Play ();
 		StaticValues.CollectibleScore = 1;
-		Debug.Log (StaticValues.CollectibleScore);
+		StaticValues.CurrentHUDMessage = "Artworks Collected: \n" + StaticValues.CollectibleScore.ToString() + "/7";
+		hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage ();
 		PointerExit ();
 	}
 
