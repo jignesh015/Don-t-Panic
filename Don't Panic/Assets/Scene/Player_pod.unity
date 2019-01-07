@@ -539,6 +539,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297085509}
   m_Mesh: {fileID: 4300000, guid: 2497a48cf43e1554aa0c4feb1c7e9d69, type: 3}
+--- !u!1001 &320017161
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555019065016328, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4efb1af6ddd4e4f48b0a442c5759d6b4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &392049334
 Prefab:
   m_ObjectHideFlags: 0
@@ -1419,7 +1461,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1cf3cfed14637cd42a0ad3f801ebdb71, type: 2}
+  - {fileID: 2100000, guid: 10de6384af0c3b54e8166f9c3f936e88, type: 2}
   - {fileID: 2100000, guid: 71c78677fdc08394da7fd716fb41a991, type: 2}
   - {fileID: 2100000, guid: 5d84bcb5cc458944085f3169d277536d, type: 2}
   - {fileID: 2100000, guid: 00fc27719fc29924b9a34aab914dc83a, type: 2}

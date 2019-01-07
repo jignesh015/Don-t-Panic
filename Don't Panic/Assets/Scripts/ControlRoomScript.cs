@@ -20,6 +20,8 @@ public class ControlRoomScript : MonoBehaviour {
 	public AudioClip dontPanicAudioClip;
 	public AudioClip computerClickClip;
 
+	public AudioSource bgAudioSource;
+
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
@@ -27,6 +29,8 @@ public class ControlRoomScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		bgAudioSource.time = 36.0f;
+
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
 
