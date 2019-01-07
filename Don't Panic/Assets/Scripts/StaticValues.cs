@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public static class StaticValues {
+	private static bool _isFirstLoad = true;
 	private static bool _dontPanicFlag = true;
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
@@ -11,6 +12,15 @@ public static class StaticValues {
 	private static string _currentHUDMessage;
 	private static List<string> _collectibleList = new List<string>();
 	private static List<string> _keywords = new List<string>(new string[] { "42", "forty two", "order to", "forget to", "for to", "for two", "for the" ,"photo", "ford to", "for you to", "for you two", "what do you", "what you do", "what do you do"});
+
+	public static bool IsFirstLoad {
+		get { 
+			return _isFirstLoad;
+		}
+		set { 
+			_isFirstLoad = value;
+		}
+	}
 
 	public static bool DontPanicFlag {
 		get { 

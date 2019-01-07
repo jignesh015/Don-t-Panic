@@ -93,7 +93,4 @@ public class MenuPanel : MonoBehaviour {
 		slider.value = 0.0f;
 	}
 
-	public void Test() {
-		Debug.Log ("Test button");
-	}
 }
