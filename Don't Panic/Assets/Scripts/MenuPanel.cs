@@ -47,8 +47,8 @@ public class MenuPanel : MonoBehaviour {
 	}
 
 	public void currentObjective() {
-		mainHUD.gameObject.SetActive (true);
-		hudText.text = StaticValues.CurrentObjective;
+		StaticValues.CurrentHUDMessage = StaticValues.CurrentObjective;
+		mainHUD.gameObject.GetComponent<HUDLogic> ().ShowMessage ();
 	}
 
 	public void artworksCollected() {

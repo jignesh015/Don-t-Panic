@@ -12353,6 +12353,7 @@ MonoBehaviour:
   bigScreenMat: {fileID: 2100000, guid: bf1464b84bb76b44abb088d5a41acfee, type: 2}
   sliderCanvas: {fileID: 610624764}
   slider: {fileID: 1411173028}
+  hudCanvas: {fileID: 1028097911}
   collectibles:
   - {fileID: 1420607396}
   - {fileID: 1917401086}

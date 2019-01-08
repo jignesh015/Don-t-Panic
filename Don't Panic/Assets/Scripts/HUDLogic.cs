@@ -26,7 +26,7 @@ public class HUDLogic : MonoBehaviour {
 		}
 	}
 
-	public void ShowMessage() {
+	public void ShowMessage(float limitArg = 2.0f) {
 		gameObject.SetActive (true);
 		activeFlag = true;
 		activeTime = Time.time;

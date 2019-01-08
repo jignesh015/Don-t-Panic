@@ -2055,6 +2055,7 @@ MonoBehaviour:
   fadeInCanvas: {fileID: 1852726764}
   startPositionWaypoint: {fileID: 2023767695}
   mainCamera: {fileID: 154875387}
+  hudCanvas: {fileID: 209638747}
 --- !u!4 &995932937
 Transform:
   m_ObjectHideFlags: 0

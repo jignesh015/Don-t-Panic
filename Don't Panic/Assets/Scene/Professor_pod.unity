@@ -773,6 +773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibles:
   - {fileID: 1894899053}
+  hudCanvas: {fileID: 511057250}
 --- !u!82 &153482556
 AudioSource:
   m_ObjectHideFlags: 0

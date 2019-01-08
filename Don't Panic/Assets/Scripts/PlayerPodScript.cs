@@ -9,6 +9,9 @@ public class PlayerPodScript : MonoBehaviour {
 	public Canvas fadeInCanvas;
 	public GameObject startPositionWaypoint;
 	public GameObject mainCamera;
+	public Canvas hudCanvas;
+
+	private bool storyFlag = true;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +25,7 @@ public class PlayerPodScript : MonoBehaviour {
 			Destroy (fadeInCanvas.gameObject);
 		}
 
-		//Destroy already collected artworks
+		//Destroy already collected artworks on scene load
 		if (StaticValues.CollectibleList.Count > 0) {
 			if (StaticValues.CollectibleList.Contains ("pl_art_0")) {
 				Destroy (collectibles [0]);
@@ -32,7 +35,20 @@ public class PlayerPodScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//Story texts
+		if (Time.time > 5.0f && Time.time < 5.2f) {
+			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[0];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+		}
+		if (Time.time > 10.0f && Time.time < 10.2f) {
+			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[1];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+		}
+		if (Time.time > 14.0f && Time.time < 14.2f) {
+			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[2];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3.0f);
+			StaticValues.CurrentObjective = StoryText.Objectives [1];
+		}
 	}
 
 
