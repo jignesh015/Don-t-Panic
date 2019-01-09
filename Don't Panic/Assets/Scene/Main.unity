@@ -505,6 +505,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd83a05899ed01c4f8604f7035ed91f0, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &463243937 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114945820771137486, guid: cd83a05899ed01c4f8604f7035ed91f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 463243936}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!223 &463243938 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223591768676087392, guid: cd83a05899ed01c4f8604f7035ed91f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 463243936}
 --- !u!1 &495848316
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +901,7 @@ GameObject:
   - component: {fileID: 1956938132}
   - component: {fileID: 1956938131}
   - component: {fileID: 1956938130}
+  - component: {fileID: 1956938133}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1001,6 +1013,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1956938128}
+--- !u!114 &1956938133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956938128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2049554841}
+          m_MethodName: EnterStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2049554841}
+          m_MethodName: ExitStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2049554840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1a5299ab1e457469ee05e35bea6c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderCanvas: {fileID: 463243938}
+  slider: {fileID: 463243937}
   mainAudioSource: {fileID: 2049554843}
 --- !u!4 &2049554842
 Transform:
