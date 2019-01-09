@@ -91,7 +91,10 @@ public static class StoryText {
 			"So you are the one that came from that mysterious spacecraft",
 			"Then why are you locked in here?",
 			"That must be Lieutenant.",
-			"How do I believe you?"
+			"How do I believe you?",
+			"5",
+			"Okay, I trust you. \n You can go..",
+			"Sorry, but I don't trust you. \n And I can't keep you alive.."
 		}
 	);
 
@@ -102,6 +105,7 @@ public static class StoryText {
 			"I'm here as a collateral. One of your crewmate had gone with my crew to visit our planet.",
 			"Yes, but they are gone far too long. I am worried for them.",
 			"Let me go, and I'll search for them",
+			"5",
 			"You have my word.",
 			"Thanks, you won't regret it.",
 			"You will regret this."
@@ -114,7 +118,7 @@ public static class StoryText {
 			"So you are the one that came from that mysterious spacecraft",
 			"Then why are you locked in here?",
 			"That must be Lieutenant.",
-			"How do I believe you?"
+			"How do I believe you?",
 		}
 	);
 

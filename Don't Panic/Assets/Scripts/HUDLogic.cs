@@ -10,6 +10,7 @@ public class HUDLogic : MonoBehaviour {
 	private bool activeFlag = false;
 	private float activeTime;
 	private float limit = 2.0f;
+	private Color colorFlag = new Color(0,0,0,0);
 
 	// Use this for initialization
 	void Start () {
@@ -26,12 +27,17 @@ public class HUDLogic : MonoBehaviour {
 		}
 	}
 
-	public void ShowMessage(float limitArg = 2.0f) {
+	public void ShowMessage(float limitArg = 2.0f, Color txtColor = default(Color)) {
 		gameObject.SetActive (true);
 		activeFlag = true;
 		activeTime = Time.time;
 		limit = limitArg;
 
 		hudText.text = StaticValues.CurrentHUDMessage;
+		if (txtColor == colorFlag) {
+			hudText.color = new Color (1, 1, 1, 1);
+		} else {
+			hudText.color = txtColor;
+		}
 	}
 }
