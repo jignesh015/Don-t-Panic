@@ -150,6 +150,11 @@ public class ExampleStreaming : MonoBehaviour
     }
 
 	public void BtnRecord() {
+		if (!StaticValues.CheckedPassword) {
+			StaticValues.CheckedCaptainDoor = true;
+			StaticValues.CurrentSubScene = "CR_2";
+		}
+
 		_passAudioSource.clip = passCorrect;
 		_passAudioSource.Play ();
 		Active = true;

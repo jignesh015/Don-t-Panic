@@ -8,7 +8,11 @@ public static class StoryText {
 			"Go out and find others",
 			"Stop the warning message alert",
 			"Find your crew mates",
-			"Check Professor's log files"
+			"Check Professor's log files",
+			"5",
+			"Check out Captain's pod",
+			"Search for password to Captain's door",
+			"Unlock captain's door"
 		}
 	);
 
@@ -28,7 +32,18 @@ public static class StoryText {
 			"Much better",
 			"So....where are my crew mates?",
 			"5",
-			"I should check their pods..."
+			"I should check their pods...",
+			"Uh, it's locked",
+			"I need to search for the password",
+			"Oh, I know this book",
+			"10",
+			"It is Captain's favourite novel",
+			"Captain's favourite novel. \n The password must be somewhere here",
+			"Let me open it and check.",
+			"Huh, there is some text highlighted here",
+			"15",
+			"THE ANSWER TO THE ULTIMATE QUESTION OF \n LIFE, UNIVERSE AND EVERYTHING IS \n 42",
+			"42! This number looks significant"
 		}
 	);
 
@@ -36,7 +51,8 @@ public static class StoryText {
 		{
 			"Huh, empty!",
 			"Where is Prof?",
-			"Maybe I should check her log files!"
+			"Maybe I should check her log files!",
+			"Let me check Captain's pod"
 		}
 	);
 
@@ -48,7 +64,8 @@ public static class StoryText {
 
 	private static List<string> _lieutenantPodLines = new List<string>(new string[] 
 		{
-			"Let me check captain's log files",
+			"Lieutenant is not here too!",
+			"Oh, a gun. This might come in handy"
 		}
 	);
 

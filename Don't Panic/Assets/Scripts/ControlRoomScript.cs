@@ -20,15 +20,21 @@ public class ControlRoomScript : MonoBehaviour {
 	public AudioClip computerClickClip;
 	public AudioSource bgAudioSource;
 
+	public GameObject book;
+
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
 	private AudioSource controlRoomAudioSource;
 	private float sceneStartTime;
+	private bool bookFlag = false;
+	private bool openBookFlag = false;
+	private BoxCollider bookBoxCollider;
 
 	// Use this for initialization
 	void Start () {
 		bgAudioSource.time = 36.0f;
+		bookBoxCollider = book.GetComponent<BoxCollider> ();
 
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
@@ -70,13 +76,24 @@ public class ControlRoomScript : MonoBehaviour {
 			slider.value = sliderValue;
 
 			if ((Time.time - enterTime) > hoverTime) {
-				SwitchOffWarning ();
+				if (bookFlag) {
+					CheckoutBook ();
+				} else {
+					SwitchOffWarning ();
+				}
+
 				pointerFlag = false;
 			}
 		}
 
 		//Story text
 		if (StaticValues.DontPanicFlag) {
+			StaticValues.CurrentSubScene = "CR_0";
+		}
+
+		switch(StaticValues.CurrentSubScene)
+		{
+		case "CR_0":
 			if (Time.time - sceneStartTime > 1.0f && Time.time - sceneStartTime < 1.2f) {
 				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines[0];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
@@ -89,11 +106,9 @@ public class ControlRoomScript : MonoBehaviour {
 			if (Time.time - sceneStartTime > 7.0f && Time.time - sceneStartTime < 7.2f) {
 				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines[2];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+				StaticValues.CurrentSubScene = " ";
 			}
-		}
-
-		switch(StaticValues.CurrentSubScene)
-		{
+			break;
 		case "CR_1":
 			if (Time.time - sceneStartTime > 4.0f && Time.time - sceneStartTime < 4.2f) {
 				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [4];
@@ -103,6 +118,61 @@ public class ControlRoomScript : MonoBehaviour {
 				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [6];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
 				StaticValues.CurrentSubScene = " ";
+			}
+			break;
+		case "CR_2":
+			sceneStartTime = Time.time;
+
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [7];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+			StaticValues.CurrentObjective = StoryText.Objectives [7];
+			StaticValues.CurrentSubScene = "CR_3";
+
+			break;
+		case "CR_3":
+			if (Time.time - sceneStartTime > 3.0f && Time.time - sceneStartTime < 3.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [8];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+				StaticValues.CurrentSubScene = " ";
+			}
+			break;
+		case "CR_4":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [9];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (2f);
+			if (Time.time - sceneStartTime > 2.0f && Time.time - sceneStartTime < 2.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [11];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+				StaticValues.CurrentSubScene = " ";
+				bookBoxCollider.enabled = true;
+			}
+			break;
+		case "CR_5":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [12];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+			if (Time.time - sceneStartTime > 3.0f && Time.time - sceneStartTime < 3.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [13];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+				StaticValues.CurrentSubScene = " ";
+				openBookFlag = true;
+				bookBoxCollider.enabled = true;
+			}
+			break;
+		case "CR_6":
+			if (Time.time - sceneStartTime > 0.5f && Time.time - sceneStartTime < 0.7f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [14];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+			}
+			if (Time.time - sceneStartTime > 3.0f && Time.time - sceneStartTime < 3.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [16];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (10f);
+			}
+			if (Time.time - sceneStartTime > 10.0f && Time.time - sceneStartTime < 10.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [17];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
+				StaticValues.CurrentObjective = StoryText.Objectives [8];
+				StaticValues.CheckedPassword = true;
+				StaticValues.CurrentSubScene = " ";
+				bookBoxCollider.enabled = true;
 			}
 			break;
 		default:
@@ -136,6 +206,34 @@ public class ControlRoomScript : MonoBehaviour {
 	}
 
 	public void exitComputerScreen() {
+		PointerExit ();
+	}
+
+	public void CheckoutBook() {
+		if (!StaticValues.CheckedCaptainDoor) {
+			StaticValues.CurrentSubScene = "CR_4";
+			sceneStartTime = Time.time;
+			bookBoxCollider.enabled = false;
+		} else {
+			if (!openBookFlag) {
+				StaticValues.CurrentSubScene = "CR_5";
+				sceneStartTime = Time.time;
+				bookBoxCollider.enabled = false;
+			} else {
+				StaticValues.CurrentSubScene = "CR_6";
+				sceneStartTime = Time.time;
+				bookBoxCollider.enabled = false;
+			}
+		}
+	}
+
+	public void EnterBook() {
+		bookFlag = true;
+		PointerEnter ();
+	}
+
+	public void ExitBook() {
+		bookFlag = false;
 		PointerExit ();
 	}
 

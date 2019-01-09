@@ -30,6 +30,7 @@ public class HUDLogic : MonoBehaviour {
 		gameObject.SetActive (true);
 		activeFlag = true;
 		activeTime = Time.time;
+		limit = limitArg;
 
 		hudText.text = StaticValues.CurrentHUDMessage;
 	}
