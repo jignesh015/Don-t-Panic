@@ -78,7 +78,9 @@ public class OpenDoor : MonoBehaviour {
 		case "Storage_room_2":
 			if (!StaticValues.CheckedLieutenantLog) {
 				StaticValues.CurrentSubScene = "CR_9";
-			} else {
+			} else if (!StaticValues.IsGunCollected) {
+				StaticValues.CurrentSubScene = "CR_10";
+			}else {
 				OpenDoorLogic (sceneName);
 			}
 			break;

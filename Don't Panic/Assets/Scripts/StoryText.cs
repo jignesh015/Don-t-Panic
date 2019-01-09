@@ -16,7 +16,8 @@ public static class StoryText {
 			"Check out Lieutenant's Pod",
 			"10",
 			"Checkout Lieutenant's log files",
-			"Collect Lieutenant's gun"
+			"Collect Lieutenant's gun",
+			"Go to storage pod"
 		}
 	);
 
@@ -51,7 +52,8 @@ public static class StoryText {
 			"I should first check Captain's logs before meeting Lieutenant.",
 			"I should check the room opposite to this one first.",
 			"20",
-			"I should first check Lieutenant's logs before going inside"
+			"I should first check Lieutenant's logs before going inside",
+			"Better get the gun before I step inside"
 		}
 	);
 
@@ -79,7 +81,7 @@ public static class StoryText {
 			"Let's check his logs.",
 			"Lieutenant is gone too?",
 			"And what was it about the gun?",
-			"I hope I don't get to use this!"
+			"I hope I don't have to use this!"
 		}
 	);
 

@@ -190,6 +190,12 @@ public class ControlRoomScript : MonoBehaviour {
 			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
 			StaticValues.CurrentSubScene = " ";
 			break;
+		case "CR_10":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [22];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
+			StaticValues.CurrentSubScene = " ";
+			StaticValues.CurrentObjective = StoryText.Objectives [12];
+			break;
 		default:
 			break;
 		}
