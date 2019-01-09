@@ -12,6 +12,7 @@ public class PlayerPodScript : MonoBehaviour {
 	public Canvas hudCanvas;
 
 	private bool storyFlag = true;
+	private float sceneStartTime;
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +22,12 @@ public class PlayerPodScript : MonoBehaviour {
 			StaticValues.IsFirstLoad = false;
 			mainCamera.transform.position = startPositionWaypoint.transform.position;
 			mainCamera.transform.rotation = Quaternion.Euler (0, -90, 0);
+
+			sceneStartTime = Time.time;
+			StaticValues.CurrentSubScene = "PP_1";
 		} else {
 			Destroy (fadeInCanvas.gameObject);
+			StaticValues.CurrentSubScene = " ";
 		}
 
 		//Destroy already collected artworks on scene load
@@ -36,19 +41,29 @@ public class PlayerPodScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Story texts
-		if (Time.time > 5.0f && Time.time < 5.2f) {
-			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[0];
-			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+		switch(StaticValues.CurrentSubScene) 
+		{
+		case "PP_1":
+			if (Time.time -sceneStartTime > 5.0f && Time.time -sceneStartTime < 5.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[0];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+			}
+			if (Time.time -sceneStartTime > 10.0f && Time.time -sceneStartTime < 10.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[1];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
+			}
+			if (Time.time -sceneStartTime > 14.0f && Time.time -sceneStartTime < 14.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[2];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3.0f);
+				StaticValues.CurrentObjective = StoryText.Objectives [1];
+				StaticValues.CurrentSubScene = " ";
+			}
+			break;
+		default:
+			break;
 		}
-		if (Time.time > 10.0f && Time.time < 10.2f) {
-			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[1];
-			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
-		}
-		if (Time.time > 14.0f && Time.time < 14.2f) {
-			StaticValues.CurrentHUDMessage = StoryText.PlayerPodLines[2];
-			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3.0f);
-			StaticValues.CurrentObjective = StoryText.Objectives [1];
-		}
+
+
 	}
 
 
