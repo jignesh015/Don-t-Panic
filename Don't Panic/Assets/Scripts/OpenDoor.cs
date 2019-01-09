@@ -50,7 +50,45 @@ public class OpenDoor : MonoBehaviour {
 		}
 	}
 
+//	public void Open_Door(string sceneName) {
+//		_sceneName = sceneName;
+//		consoleScreen.GetComponent<MeshRenderer> ().material = doorOpeningMaterial;
+//		doorAnimator.SetBool ("OpenDoor", true);
+//		_doorAudioSource.Play ();
+//		StartCoroutine(ChangeScene(_sceneName));
+//	}
+
 	public void Open_Door(string sceneName) {
+		switch(sceneName) 
+		{
+		case "Lieutenant_pod":
+			if (!StaticValues.CheckedCaptainLog) {
+				StaticValues.CurrentSubScene = "CR_7";
+			} else {
+				OpenDoorLogic (sceneName);
+			}
+			break;
+		case "Storage_room_1":
+			if (!StaticValues.CheckedAlienPod) {
+				StaticValues.CurrentSubScene = "CR_8";
+			} else {
+				OpenDoorLogic (sceneName);
+			}
+			break;
+		case "Storage_room_2":
+			if (!StaticValues.CheckedLieutenantLog) {
+				StaticValues.CurrentSubScene = "CR_9";
+			} else {
+				OpenDoorLogic (sceneName);
+			}
+			break;
+		default:
+			OpenDoorLogic (sceneName);
+			break;
+		}
+	}
+
+	private void OpenDoorLogic(string sceneName) {
 		_sceneName = sceneName;
 		consoleScreen.GetComponent<MeshRenderer> ().material = doorOpeningMaterial;
 		doorAnimator.SetBool ("OpenDoor", true);

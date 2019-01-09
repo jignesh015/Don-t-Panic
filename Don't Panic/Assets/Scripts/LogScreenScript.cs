@@ -21,6 +21,7 @@ public class LogScreenScript : MonoBehaviour {
 	private float enterTime;
 	private float hoverTime = 1.5f;
 	private string activeBtn;
+	private bool checkedLog = false;
 
 	// Use this for initialization
 	void Start () {
@@ -81,6 +82,24 @@ public class LogScreenScript : MonoBehaviour {
 		//Toggle next btn
 		if (logFileIndex == logText.Count - 1) {
 			nextBtn.gameObject.SetActive (false);
+
+			//Mark logs as read
+			if (!checkedLog) {
+				checkedLog = true;
+				switch (logIndicator) {
+				case 1:
+					StaticValues.CheckedProfLogs = true;
+					break;
+				case 2:
+					StaticValues.CheckedCaptainLog = true;
+					break;
+				case 3:
+					StaticValues.CheckedLieutenantLog = true;
+					break;
+				default:
+					break;
+				}
+			}
 		} else {
 			nextBtn.gameObject.SetActive (true);
 		}

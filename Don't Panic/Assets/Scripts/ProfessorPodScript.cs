@@ -8,6 +8,7 @@ public class ProfessorPodScript : MonoBehaviour {
 	public Canvas hudCanvas;
 
 	private float sceneStartTime;
+	private bool profLogFlag = true;
 
 	// Use this for initialization
 	void Start () {
@@ -20,11 +21,19 @@ public class ProfessorPodScript : MonoBehaviour {
 
 		if (!StaticValues.CheckedProfLogs) {
 			StaticValues.CurrentSubScene = "PF_1";
+		} else {
+			profLogFlag = false;
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (StaticValues.CheckedProfLogs && profLogFlag) {
+			profLogFlag = false;
+			StaticValues.CurrentSubScene = "PF_2";
+			sceneStartTime = Time.time;
+		}
+
 		//Story text
 		switch(StaticValues.CurrentSubScene)
 		{
@@ -41,6 +50,27 @@ public class ProfessorPodScript : MonoBehaviour {
 				StaticValues.CurrentHUDMessage = StoryText.ProfessorPodLines [2];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
 				StaticValues.CurrentObjective = StoryText.Objectives [4];
+				StaticValues.CurrentSubScene = " ";
+			}
+			break;
+		case "PF_2":
+			if (Time.time - sceneStartTime > 1.5f && Time.time - sceneStartTime < 1.7f) {
+				StaticValues.CurrentHUDMessage = StoryText.ProfessorPodLines [3];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (2f);
+				if (!StaticValues.CheckedCaptainLog) {
+					StaticValues.CurrentSubScene = "PF_3";
+					sceneStartTime = Time.time;
+				} else {
+					StaticValues.CurrentSubScene = " ";
+				}
+			}
+			break;
+		case "PF_3":
+			if (Time.time - sceneStartTime > 1.0f && Time.time - sceneStartTime < 1.2f) {
+				StaticValues.CurrentHUDMessage = StoryText.ProfessorPodLines [4];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (2f);
+				StaticValues.CurrentSubScene = " ";
+				StaticValues.CurrentObjective = StoryText.Objectives [6];
 			}
 			break;
 		default:

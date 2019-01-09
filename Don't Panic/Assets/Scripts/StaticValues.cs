@@ -9,6 +9,9 @@ public static class StaticValues {
 	private static bool _checkedProfLogs = false;
 	private static bool _checkedPassword = false;
 	private static bool _checkedCaptainDoor = false;
+	private static bool _checkedCaptainLog = false;
+	private static bool _checkedLieutenantLog = false;
+	private static bool _checkedAlienPod = false;
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
 	private static string _currentObjective = "...";
@@ -59,6 +62,33 @@ public static class StaticValues {
 		}
 		set { 
 			_checkedCaptainDoor = value;
+		}
+	}
+
+	public static bool CheckedCaptainLog {
+		get { 
+			return _checkedCaptainLog;
+		}
+		set { 
+			_checkedCaptainLog = value;
+		}
+	}
+
+	public static bool CheckedLieutenantLog {
+		get { 
+			return _checkedLieutenantLog;
+		}
+		set { 
+			_checkedLieutenantLog = value;
+		}
+	}
+
+	public static bool CheckedAlienPod {
+		get { 
+			return _checkedAlienPod;
+		}
+		set { 
+			_checkedAlienPod = value;
 		}
 	}
 

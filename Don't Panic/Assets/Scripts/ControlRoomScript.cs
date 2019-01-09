@@ -175,6 +175,21 @@ public class ControlRoomScript : MonoBehaviour {
 				bookBoxCollider.enabled = true;
 			}
 			break;
+		case "CR_7":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [18];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
+			StaticValues.CurrentSubScene = " ";
+			break;
+		case "CR_8":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [19];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
+			StaticValues.CurrentSubScene = " ";
+			break;
+		case "CR_9":
+			StaticValues.CurrentHUDMessage = StoryText.ControlRoomLines [21];
+			hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f);
+			StaticValues.CurrentSubScene = " ";
+			break;
 		default:
 			break;
 		}

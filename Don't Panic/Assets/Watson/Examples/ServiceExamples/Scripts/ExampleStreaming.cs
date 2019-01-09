@@ -52,6 +52,8 @@ public class ExampleStreaming : MonoBehaviour
 
 	public Canvas sliderCanvas;
 	public Slider slider;
+
+	public bool skipPasswordCheck;
     #endregion
 
 
@@ -150,16 +152,21 @@ public class ExampleStreaming : MonoBehaviour
     }
 
 	public void BtnRecord() {
-		if (!StaticValues.CheckedPassword) {
-			StaticValues.CheckedCaptainDoor = true;
-			StaticValues.CurrentSubScene = "CR_2";
+		if (!skipPasswordCheck) {
+			if (!StaticValues.CheckedPassword) {
+				StaticValues.CheckedCaptainDoor = true;
+				StaticValues.CurrentSubScene = "CR_2";
+			}
+
+			_passAudioSource.clip = passCorrect;
+			_passAudioSource.Play ();
+			Active = true;
+			StartRecording ();
+			ResultsField.text = "Speak \n password";
+		} else {
+			captainDoor.GetComponent<OpenDoor>().Open_Door("Captain_pod");
 		}
 
-		_passAudioSource.clip = passCorrect;
-		_passAudioSource.Play ();
-		Active = true;
-		StartRecording();
-		ResultsField.text = "Speak \n password";
 	}
 
 	public void Enter() {
