@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SpaceShuttleScript : MonoBehaviour {
 
@@ -135,6 +136,9 @@ public class SpaceShuttleScript : MonoBehaviour {
 			}
 			if (Time.time - sceneStartTime > 17.0f && Time.time - sceneStartTime < 17.2f) {
 				fadeOutAnimator.SetBool ("FadeOut", true);
+			}
+			if (Time.time - sceneStartTime > 20.0f && Time.time - sceneStartTime < 21.2f) {
+				SceneManager.LoadScene ("End_credits");
 			}
 			break;
 		default:

@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Storage_room_2.unity
     guid: 7afa69c0de26db941bcbe0b4e2c403bb
+  - enabled: 1
+    path: Assets/Scene/End_credits.unity
+    guid: ae4ea7e9c114240478823b8797bb967d

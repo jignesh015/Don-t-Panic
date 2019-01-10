@@ -4011,7 +4011,7 @@ MonoBehaviour:
   doorConsole: {fileID: 1033921149}
   clickAudioSource: {fileID: 1005890646}
   fadeOutAnimator: {fileID: 1304094981}
-  toggleKilledAlien: 1
+  toggleKilledAlien: 0
 --- !u!82 &1005890646
 AudioSource:
   m_ObjectHideFlags: 0
