@@ -7,16 +7,22 @@ public class AlienPodScript : MonoBehaviour {
 
 	public Canvas hudCanvas;
 	public Canvas decisionCanvas;
-
 	public Canvas sliderCanvas;
 	public Slider slider;
-
 	public GameObject alien;
+	public ParticleSystem muzzleFlash;
+	public ParticleSystem destroyParticleEffect;
+	public Animator fadeOutAnimator;
+	public GameObject door;
+	public AudioSource gunAudioSource;
+	public AudioSource decisionCanvasAudioSource;
+	public AudioClip popUpAudio;
+	public AudioClip btnClickAudio;
+	public bool alienConvoFlag = false;
 
 	private bool pointerFlag = false;
 	private float enterTime;
 	private float hoverTime = 1.5f;
-	private bool alienConvoFlag = false;
 	private bool yesBtnFlag;
 	private float sceneStartTime;
 	private Color alienTextColor;
@@ -25,6 +31,9 @@ public class AlienPodScript : MonoBehaviour {
 	void Start () {
 		slider.maxValue = hoverTime;
 		sliderCanvas.gameObject.SetActive (false);
+
+		muzzleFlash.gameObject.SetActive (false);
+		destroyParticleEffect.gameObject.SetActive (false);
 
 		sceneStartTime = Time.time;
 		alienTextColor = new Color (0, 1, 0, 1);
@@ -115,8 +124,15 @@ public class AlienPodScript : MonoBehaviour {
 			if (Time.time - sceneStartTime > 3.5f && Time.time - sceneStartTime < 3.7f) {
 				StaticValues.CurrentHUDMessage = StoryText.AlienLines[7];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f,alienTextColor);
-				StaticValues.CurrentSubScene = " ";
 				StaticValues.CheckedAlienPod = true;
+			}
+			if (Time.time - sceneStartTime > 6.5f && Time.time - sceneStartTime < 6.7f) {
+				fadeOutAnimator.SetBool ("FadeOut", true);
+			}
+			if (Time.time - sceneStartTime > 8.0f && Time.time - sceneStartTime < 8.2f) {
+				door.GetComponent<AudioSource> ().enabled = false;
+				door.GetComponent<OpenDoor>().Open_Door("Control_room");
+				StaticValues.CurrentSubScene = " ";
 			}
 			break;
 		case "AP_3":
@@ -127,8 +143,29 @@ public class AlienPodScript : MonoBehaviour {
 			if (Time.time - sceneStartTime > 3.5f && Time.time - sceneStartTime < 3.7f) {
 				StaticValues.CurrentHUDMessage = StoryText.AlienLines[8];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (4f,alienTextColor);
-				StaticValues.CurrentSubScene = " ";
+			}
+			if (Time.time - sceneStartTime > 5.5f && Time.time - sceneStartTime < 5.7f) {
+				muzzleFlash.gameObject.SetActive (true);
+				muzzleFlash.Play ();
+				gunAudioSource.Play ();
+			}
+			if (Time.time - sceneStartTime > 5.8f && Time.time - sceneStartTime < 5.9f) {
+				destroyParticleEffect.gameObject.SetActive (true);
+				destroyParticleEffect.Play ();
+				Destroy (alien);
+			}
+			if (Time.time - sceneStartTime > 7.5f && Time.time - sceneStartTime < 7.7f) {
+				StaticValues.CurrentHUDMessage = StoryText.AlienPodLines[8];
+				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (3f);
 				StaticValues.CheckedAlienPod = true;
+			}
+			if (Time.time - sceneStartTime > 8.5f && Time.time - sceneStartTime < 8.7f) {
+				fadeOutAnimator.SetBool ("FadeOut", true);
+			}
+			if (Time.time - sceneStartTime > 10.0f && Time.time - sceneStartTime < 10.2f) {
+				door.GetComponent<AudioSource> ().enabled = false;
+				door.GetComponent<OpenDoor>().Open_Door("Control_room");
+				StaticValues.CurrentSubScene = " ";
 			}
 			break;
 		default:
@@ -137,14 +174,18 @@ public class AlienPodScript : MonoBehaviour {
 
 		if (alienConvoFlag) {
 			decisionCanvas.gameObject.SetActive (true);
+			decisionCanvasAudioSource.clip = popUpAudio;
+			decisionCanvasAudioSource.Play ();
 			alienConvoFlag = false;
 		}
 	}
 
 	public void YesBtn() {
-		Debug.Log ("Let him go");
+		Debug.Log ("Test");
+		decisionCanvasAudioSource.clip = btnClickAudio;
+		decisionCanvasAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
-		sliderCanvas.gameObject.SetActive (false);
+		PointerExit ();
 
 		sceneStartTime = Time.time;
 		StaticValues.CurrentSubScene = "AP_2";
@@ -161,9 +202,10 @@ public class AlienPodScript : MonoBehaviour {
 	}
 
 	public void NoBtn() {
-		Debug.Log ("Kill him");
+		decisionCanvasAudioSource.clip = btnClickAudio;
+		decisionCanvasAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
-		sliderCanvas.gameObject.SetActive (false);
+		PointerExit ();
 
 		sceneStartTime = Time.time;
 		StaticValues.CurrentSubScene = "AP_3";

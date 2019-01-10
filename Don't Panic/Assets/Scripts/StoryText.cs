@@ -94,16 +94,17 @@ public static class StoryText {
 			"How do I believe you?",
 			"5",
 			"Okay, I trust you. \n You can go..",
-			"Sorry, but I don't trust you. \n And I can't keep you alive.."
+			"Sorry, but I don't trust you. \n And I can't keep you alive..",
+			"I hope I did the right thing!"
 		}
 	);
 
 	private static List<string> _alienLines = new List<string>(new string[] 
 		{
 			"Don't be shocked to see me, human!",
-			"Yes. And I mean no harm, as I tried explaining to your partners",
-			"I'm here as a collateral. One of your crewmate had gone with my crew to visit our planet.",
-			"Yes, but they are gone far too long. I am worried for them.",
+			"Yes. And I mean no harm, as I tried explaining to your partner",
+			"I'm here as a collateral. Your crewmate has gone with my team to visit our planet.",
+			"Yes, but they are gone for far too long. I am worried for them.",
 			"Let me go, and I'll search for them",
 			"5",
 			"You have my word.",
