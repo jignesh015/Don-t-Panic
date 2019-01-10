@@ -13,6 +13,7 @@ public static class StaticValues {
 	private static bool _checkedLieutenantLog = false;
 	private static bool _checkedAlienPod = false;
 	private static bool _isGunCollected = false;
+	private static bool _killedAlien = false;
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
 	private static string _currentObjective = "...";
@@ -99,6 +100,15 @@ public static class StaticValues {
 		}
 		set { 
 			_isGunCollected = value;
+		}
+	}
+
+	public static bool KilledAlien {
+		get { 
+			return _killedAlien;
+		}
+		set { 
+			_killedAlien = value;
 		}
 	}
 

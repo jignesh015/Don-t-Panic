@@ -132,6 +132,7 @@ public class AlienPodScript : MonoBehaviour {
 			if (Time.time - sceneStartTime > 8.0f && Time.time - sceneStartTime < 8.2f) {
 				door.GetComponent<AudioSource> ().enabled = false;
 				door.GetComponent<OpenDoor>().Open_Door("Control_room");
+				StaticValues.CurrentObjective = StoryText.Objectives [14];
 				StaticValues.CurrentSubScene = " ";
 			}
 			break;
@@ -165,6 +166,7 @@ public class AlienPodScript : MonoBehaviour {
 			if (Time.time - sceneStartTime > 10.0f && Time.time - sceneStartTime < 10.2f) {
 				door.GetComponent<AudioSource> ().enabled = false;
 				door.GetComponent<OpenDoor>().Open_Door("Control_room");
+				StaticValues.CurrentObjective = StoryText.Objectives [14];
 				StaticValues.CurrentSubScene = " ";
 			}
 			break;

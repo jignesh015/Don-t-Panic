@@ -17,7 +17,10 @@ public static class StoryText {
 			"10",
 			"Checkout Lieutenant's log files",
 			"Collect Lieutenant's gun",
-			"Go to storage pod"
+			"Go to storage pod",
+			"Check out the other storage pod",
+			"15",
+			"Check console message"
 		}
 	);
 
@@ -115,11 +118,30 @@ public static class StoryText {
 
 	private static List<string> _spaceShuttlePodLines = new List<string>(new string[] 
 		{
-			"What the...",
-			"So you are the one that came from that mysterious spacecraft",
-			"Then why are you locked in here?",
-			"That must be Lieutenant.",
-			"How do I believe you?",
+			"This must be that alien's space shuttle",
+			"There's a message from someone on the console screen",
+			"Guess I have no other option but to wait for Mothership",
+			"I hope they arrive soon..",
+			"I don't know what adventures await me out there...",
+			"5",
+			"But I must go find Lietenant no matter what.....",
+			"The ship's alert message gives me some motivation..",
+			"Out of all the advices I have recieved, this one is pretty apt for me right now...",
+			"DON'T PANIC!"
+		}
+	);
+
+	private static List<string> _consoleMessageText = new List<string>(new string[] 
+		{
+			"15/12/2139 EY \n" +
+			"From: Mothership Base \n" +
+			"To: SSE Nomad \n \n" +
+			"Greetings Captain, \n" +
+			"We were not able to make contact with either you or the Earth base for a while." +
+			"I hope everything is okay over there. Anyway, we have decided to regroup and replan the entire mission." +
+			"If you get this message, please send your coordinates so that we can pick you up." +
+			"\n Regards, \n" +
+			"Captain Mortimer, Mothership Base",
 		}
 	);
 
@@ -174,6 +196,12 @@ public static class StoryText {
 	public static List<string> SpaceShuttlePodLines {
 		get { 
 			return _spaceShuttlePodLines;
+		}
+	}
+
+	public static List<string> ConsoleMessageText {
+		get { 
+			return _consoleMessageText;
 		}
 	}
 }
