@@ -22,7 +22,12 @@ public class EndCreditScript : MonoBehaviour {
 
 		stats [0].text = StoryText.CreditStats[0] + StaticValues.CollectibleScore.ToString() + StoryText.CreditStats[1];
 		stats[1].text = StaticValues.KilledAlien?StoryText.CreditStats[3]:StoryText.CreditStats[2];
-		stats[2].text = StaticValues.ChoseToWait?StoryText.CreditStats[4]:StoryText.CreditStats[5];
+
+		if (StaticValues.KilledAlien) {
+			stats [2].text = StaticValues.ChoseToWait ? StoryText.CreditStats [4] : StoryText.CreditStats [5];
+		} else {
+			stats [2].gameObject.SetActive (false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -80,7 +85,7 @@ public class EndCreditScript : MonoBehaviour {
 		StaticValues.KilledAlien = false;
 		StaticValues.ChoseToWait = false;
 		StaticValues.SpawnToWaypoint = 0;
-		StaticValues.CollectibleScore = 0;
+		StaticValues.CollectibleScore = 0 - StaticValues.CollectibleScore;
 		StaticValues.CurrentObjective = "...";
 		StaticValues.CurrentHUDMessage = null;
 		StaticValues.CurrentSubScene = "PlayerPod";

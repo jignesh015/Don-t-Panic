@@ -52,7 +52,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
@@ -559,6 +559,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046318418}
+--- !u!20 &1089746063 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20995828096158860, guid: 27523dee0216da14ba9d0cce3d4be27c,
+    type: 2}
+  m_PrefabInternal: {fileID: 732231147}
 --- !u!1001 &1108358767
 Prefab:
   m_ObjectHideFlags: 0
@@ -675,6 +680,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223591768676087392, guid: cd83a05899ed01c4f8604f7035ed91f0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1089746063}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd83a05899ed01c4f8604f7035ed91f0, type: 2}
   m_IsPrefabParent: 0

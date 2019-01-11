@@ -54,7 +54,7 @@ public class ProfessorPodScript : MonoBehaviour {
 			}
 			break;
 		case "PF_2":
-			if (Time.time - sceneStartTime > 1.5f && Time.time - sceneStartTime < 1.7f) {
+			if (Time.time - sceneStartTime > 3.5f && Time.time - sceneStartTime < 3.7f) {
 				StaticValues.CurrentHUDMessage = StoryText.ProfessorPodLines [3];
 				hudCanvas.gameObject.GetComponent<HUDLogic> ().ShowMessage (2f);
 				if (!StaticValues.CheckedCaptainLog) {

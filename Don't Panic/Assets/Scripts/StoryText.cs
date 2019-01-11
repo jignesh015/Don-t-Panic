@@ -149,8 +149,8 @@ public static class StoryText {
 		{
 			"> You collected ",
 			"/7 artworks",
-			"> You trusted the alien",
-			"> You killed the alien",
+			"> You chose to trust the alien",
+			"> You chose to kill the alien",
 			"> You chose to wait for Starship",
 			"> You chose to search for Lieutenant"
 		}

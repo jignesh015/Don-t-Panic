@@ -11841,6 +11841,16 @@ Prefab:
       propertyPath: skipPasswordCheck
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114448199599630158, guid: 83d0a936c5ee10e449127746069b59b9,
+        type: 2}
+      propertyPath: cameraObj
+      value: 
+      objectReference: {fileID: 485151676}
+    - target: {fileID: 114448199599630158, guid: 83d0a936c5ee10e449127746069b59b9,
+        type: 2}
+      propertyPath: doorWaypoint
+      value: 
+      objectReference: {fileID: 1508945158}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83d0a936c5ee10e449127746069b59b9, type: 2}
   m_IsPrefabParent: 0

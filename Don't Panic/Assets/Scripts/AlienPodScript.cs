@@ -14,6 +14,7 @@ public class AlienPodScript : MonoBehaviour {
 	public ParticleSystem destroyParticleEffect;
 	public Animator fadeOutAnimator;
 	public GameObject door;
+	public GameObject doorConsole;
 	public AudioSource gunAudioSource;
 	public AudioSource decisionCanvasAudioSource;
 	public AudioClip popUpAudio;
@@ -183,7 +184,7 @@ public class AlienPodScript : MonoBehaviour {
 	}
 
 	public void YesBtn() {
-		Debug.Log ("Test");
+		doorConsole.GetComponent<BoxCollider> ().enabled = false;
 		decisionCanvasAudioSource.clip = btnClickAudio;
 		decisionCanvasAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
@@ -204,6 +205,7 @@ public class AlienPodScript : MonoBehaviour {
 	}
 
 	public void NoBtn() {
+		doorConsole.GetComponent<BoxCollider> ().enabled = false;
 		decisionCanvasAudioSource.clip = btnClickAudio;
 		decisionCanvasAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);

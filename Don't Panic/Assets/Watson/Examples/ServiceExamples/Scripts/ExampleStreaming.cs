@@ -53,6 +53,9 @@ public class ExampleStreaming : MonoBehaviour
 	public Canvas sliderCanvas;
 	public Slider slider;
 
+	public GameObject doorWaypoint;
+	public GameObject cameraObj;
+
 	public bool skipPasswordCheck;
     #endregion
 
@@ -66,6 +69,7 @@ public class ExampleStreaming : MonoBehaviour
 	private bool _pointerFlag = false;
 	private float _enterTime;
 	private float _hoverTime = 1.5f;
+	private bool _startedRecording = false;
 
     private SpeechToText _service;
 
@@ -89,6 +93,14 @@ public class ExampleStreaming : MonoBehaviour
 			if ((Time.time - _enterTime) > _hoverTime) {
 				BtnRecord ();
 				_pointerFlag = false;
+			}
+		}
+
+		if (_startedRecording) {
+			if (cameraObj.transform.position != doorWaypoint.transform.position) {
+				StopRecording ();
+				ResultsField.text = "Password \n needed";
+				_startedRecording = false; 
 			}
 		}
 	}
@@ -162,6 +174,7 @@ public class ExampleStreaming : MonoBehaviour
 			_passAudioSource.Play ();
 			Active = true;
 			StartRecording ();
+			_startedRecording = true;
 			ResultsField.text = "Speak \n password";
 		} else {
 			captainDoor.GetComponent<OpenDoor>().Open_Door("Captain_pod");
