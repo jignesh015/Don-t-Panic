@@ -188,6 +188,7 @@ public class SpaceShuttleScript : MonoBehaviour {
 	}
 
 	public void Choice_1() {
+		StaticValues.ChoseToWait = true;
 		clickAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
 		sceneStartTime = Time.time;
@@ -205,6 +206,7 @@ public class SpaceShuttleScript : MonoBehaviour {
 	}
 
 	public void Choice_2() {
+		StaticValues.ChoseToWait = false;
 		clickAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
 		sceneStartTime = Time.time;

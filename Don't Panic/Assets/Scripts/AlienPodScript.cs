@@ -207,6 +207,7 @@ public class AlienPodScript : MonoBehaviour {
 		decisionCanvasAudioSource.clip = btnClickAudio;
 		decisionCanvasAudioSource.Play ();
 		decisionCanvas.gameObject.SetActive (false);
+		StaticValues.KilledAlien = true;
 		PointerExit ();
 
 		sceneStartTime = Time.time;

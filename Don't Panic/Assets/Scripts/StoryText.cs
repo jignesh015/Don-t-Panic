@@ -145,6 +145,17 @@ public static class StoryText {
 		}
 	);
 
+	private static List<string> _creditStats = new List<string>(new string[] 
+		{
+			"> You collected ",
+			"/7 artworks",
+			"> You trusted the alien",
+			"> You killed the alien",
+			"> You chose to wait for Starship",
+			"> You chose to search for Lieutenant"
+		}
+	);
+
 	public static List<string> Objectives {
 		get { 
 			return _objectives;
@@ -202,6 +213,12 @@ public static class StoryText {
 	public static List<string> ConsoleMessageText {
 		get { 
 			return _consoleMessageText;
+		}
+	}
+
+	public static List<string> CreditStats {
+		get { 
+			return _creditStats;
 		}
 	}
 }

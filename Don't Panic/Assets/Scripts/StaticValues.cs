@@ -14,6 +14,7 @@ public static class StaticValues {
 	private static bool _checkedAlienPod = false;
 	private static bool _isGunCollected = false;
 	private static bool _killedAlien = false;
+	private static bool _choseToWait = false;
 	private static int _spawnToWaypoint;
 	private static int _collectibleScore = 0;
 	private static string _currentObjective = "...";
@@ -109,6 +110,15 @@ public static class StaticValues {
 		}
 		set { 
 			_killedAlien = value;
+		}
+	}
+
+	public static bool ChoseToWait {
+		get { 
+			return _choseToWait;
+		}
+		set { 
+			_choseToWait = value;
 		}
 	}
 
